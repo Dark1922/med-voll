@@ -26,6 +26,7 @@ public class MedicoController {
         medicoRepository.save(new Medico(dados));
     }
 
+
     @GetMapping
     public Page<DadosListagemMedico> listar(Pageable paginacao) {
         return medicoRepository.findAll(paginacao).map(DadosListagemMedico::new);
