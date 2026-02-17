@@ -2,8 +2,8 @@ package med.voll.api.controller;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import med.voll.api.dto.*;
-import med.voll.api.repository.PacienteRepository;
+import med.voll.api.domain.dto.*;
+import med.voll.api.domain.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,12 +18,6 @@ public class PacienteController {
 
         @Autowired
         private PacienteRepository repository;
-
-        @PostMapping
-        @Transactional
-        public void cadastrar(@RequestBody @Valid DadosCadastroPaciente dados) {
-            repository.save(new Paciente(dados));
-        }
 
     @PostMapping
     @Transactional

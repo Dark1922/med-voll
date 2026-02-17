@@ -1,6 +1,6 @@
-package med.voll.api.dto;
+package med.voll.api.domain.dto;
 
-import med.voll.api.enums.Especialidade;
+import med.voll.api.domain.enums.Especialidade;
 
 public record DadosDetalhamentoMedico(Long id, String nome, String email, String crm, String telefone,
                                       Especialidade especialidade, Endereco endereco) {
